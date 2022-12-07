@@ -2,6 +2,11 @@ from nltk.stem import WordNetLemmatizer
 from cleaning import cleaning, remove_freqwords
 import pickle
 
+import nltk
+
+nltk.download('wordnet')
+nltk.download('stopwords')
+
 with open("modeles", 'rb') as file:
     models_dic = pickle.load(file)
 
